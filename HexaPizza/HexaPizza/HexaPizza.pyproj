@@ -21,17 +21,73 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="code\classes\FileLoader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\FileLoaderGraphic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\FileLoaderTxt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\HexaPizza.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Map.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\MapTile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Town.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_FileLoader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_FileLoaderGraphic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_FileLoaderTxt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_HexaPizza.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_MapTile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_Town.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unittests\TestFileLoaderGraphic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="HexaPizza.py" />
+    <Compile Include="unittests\TestFileLoaderTxt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="code\" />
     <Folder Include="code\classes\" />
     <Folder Include="code\configs\" />
+    <Folder Include="files\txt\" />
+    <Folder Include="unittests\" />
     <Folder Include="files\" />
     <Folder Include="files\gfx\" />
     <Folder Include="files\music\" />
     <Folder Include="files\fonts\" />
     <Folder Include="files\sfx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\txt\Town1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

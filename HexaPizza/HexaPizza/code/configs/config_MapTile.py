@@ -1,0 +1,43 @@
+# MAPPING FOR GENERATING THE TOWN
+HEXA_PIZZA = "0"
+
+HOUSE_ENTRANCE_LEFT = "1"
+HOUSE_ENTRANCE_RIGHT = "2"
+HOUSE_ENTRANCE_TOP = "3"
+HOUSE_ENTRANCE_BOTTOM = "4"
+
+ROAD_STRAIGHT_BOTTOM_TOP = "A"
+ROAD_STRAIGHT_LEFT_RIGHT = "B"
+ROAD_CURVE_TOP_LEFT = "C"
+ROAD_CURVE_TOP_RIGHT = "D"
+ROAD_CURVE_BOTTOM_LEFT = "E"
+ROAD_CURVE_BOTTOM_RIGHT = "F"
+ROAD_CROSSROADS = "G"
+ROAD_BRIDGE_TOP_BOTTOM = "H"
+ROAD_BRIDGE_LEFT_RIGHT = "I"
+
+SCENERY_FOREST_VARIATION_1 = "+"
+SCENERY_FOREST_VARIATION_2 = "-"
+SCENERY_MEADOW_1 = "*"
+SCENERY_MEADOW_2 = "#"
+SCENERY_RIVER_TOP_BOTTOM = "!"
+SCENERY_RIVER_LEFT_RIGHT = "?"
+
+DAY_IMAGE = "day"
+NIGHT_IMAGE = "night"
+
+# Lookup dict.
+MAPPING_CHAR_FILENAMES = {
+	SCENERY_FOREST_VARIATION_1: {
+		"day": "scenery_forest_variation_1_day.png",
+		"night": "scenery_forest_variation_1_night.png"
+		},
+	SCENERY_FOREST_VARIATION_2: {
+		"day": "scenery_forest_variation_2_day.png",
+		"night": "scenery_forest_variation_2_night.png"
+		}
+	}
+
+# Dimensions of a single map tile always are the same.
+MAP_TILE_SIZE_WIDTH = 200 # px
+MAP_TILE_SIZE_HEIGHT = 200 # px

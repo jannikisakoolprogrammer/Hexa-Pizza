@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HexaPizza", "HexaPizza\HexaPizza.pyproj", "{06A62268-D822-49DD-BC55-6840E776D624}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06A62268-D822-49DD-BC55-6840E776D624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A62268-D822-49DD-BC55-6840E776D624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B59120D4-DBC8-4559-B1D5-A6E3ED63E54F}
+	EndGlobalSection
+EndGlobal

@@ -28,13 +28,53 @@ NIGHT_IMAGE = "night"
 
 # Lookup dict.
 MAPPING_CHAR_FILENAMES = {
+	HOUSE_ENTRANCE_LEFT: {
+		"day": "HOUSE_ENTRANCE_LEFT.png",
+		"night": "HOUSE_ENTRANCE_LEFT.png"
+		},
+	HOUSE_ENTRANCE_RIGHT: {
+		"day": "HOUSE_ENTRANCE_RIGHT.png",
+		"night": "HOUSE_ENTRANCE_RIGHT.png"
+		},
+	HOUSE_ENTRANCE_BOTTOM: {
+		"day": "HOUSE_ENTRANCE_BOTTOM.png",
+		"night": "HOUSE_ENTRANCE_BOTTOM.png"
+		},
+	HOUSE_ENTRANCE_TOP: {
+		"day": "HOUSE_ENTRANCE_TOP.png",
+		"night": "HOUSE_ENTRANCE_TOP.png"
+		},
+	ROAD_STRAIGHT_LEFT_RIGHT: {
+		"day": "ROAD_STRAIGHT_LEFT_RIGHT_DAY.png",
+		"night": "ROAD_STRAIGHT_LEFT_RIGHT_DAY.png"
+		},
+	ROAD_STRAIGHT_BOTTOM_TOP: {
+		"day": "ROAD_STRAIGHT_BOTTOM_TOP_DAY.png",
+		"night": "ROAD_STRAIGHT_BOTTOM_TOP_DAY.png"
+		},
+	ROAD_CURVE_BOTTOM_RIGHT: {
+		"day": "ROAD_CURVE_BOTTOM_RIGHT_DAY.png",
+		"night": "ROAD_CURVE_BOTTOM_RIGHT_DAY.png"
+		},
+	ROAD_CURVE_BOTTOM_LEFT: {
+		"day": "ROAD_CURVE_BOTTOM_LEFT_DAY.png",
+		"night": "ROAD_CURVE_BOTTOM_LEFT_DAY.png"
+		},
+	ROAD_CURVE_TOP_LEFT: {
+		"day": "ROAD_CURVE_TOP_LEFT_DAY.png",
+		"night": "ROAD_CURVE_TOP_LEFT_DAY.png"
+		},
+	ROAD_CURVE_TOP_RIGHT: {
+		"day": "ROAD_CURVE_TOP_RIGHT_DAY.png",
+		"night": "ROAD_CURVE_TOP_RIGHT_DAY.png"
+		},
 	SCENERY_FOREST_VARIATION_1: {
-		"day": "scenery_forest_variation_1_day.png",
-		"night": "scenery_forest_variation_1_night.png"
+		"day": "SCENERY_FOREST_VARIATION_1_DAY.png",
+		"night": "SCENERY_FOREST_VARIATION_1_DAY.png"
 		},
 	SCENERY_FOREST_VARIATION_2: {
-		"day": "scenery_forest_variation_2_day.png",
-		"night": "scenery_forest_variation_2_night.png"
+		"day": "SCENERY_FOREST_VARIATION_2_DAY.png",
+		"night": "SCENERY_FOREST_VARIATION_2_DAY.png"
 		}
 	}
 

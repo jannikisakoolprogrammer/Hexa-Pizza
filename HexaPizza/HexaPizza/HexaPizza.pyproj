@@ -70,6 +70,15 @@
     <Compile Include="unittests\TestFileLoaderTxt.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="unittests\TestMap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unittests\TestMapTile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unittests\TestTown.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="__init__.py">
       <SubType>Code</SubType>
     </Compile>

@@ -19,6 +19,7 @@ class MapTile(pygame.sprite.Sprite):
 				 _pos_top):
 		super(MapTile, self).__init__()
 
+
 		# Fetch the filenames by using the char passed.
 		filenames = config_MapTile.MAPPING_CHAR_FILENAMES[_char]
 		

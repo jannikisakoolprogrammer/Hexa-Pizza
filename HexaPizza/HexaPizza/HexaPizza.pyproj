@@ -39,6 +39,9 @@
     <Compile Include="code\classes\MapTile.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\Scooter.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\Town.py">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +58,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\configs\config_MapTile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_Scooter.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\configs\config_Town.py">

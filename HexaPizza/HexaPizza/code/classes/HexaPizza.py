@@ -22,10 +22,18 @@ class HexaPizza(object):
 		while running:
 			eventlist = pygame.event.get()
 			for e in eventlist:
-				if e.type == pygame.KEYDOWN:
+				if e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE:
 					running = False
+
+			# Update Player/Scooter
+			self.town.scooter.update(eventlist)
+
 			self.window.blit(self.town.map.image,
 							 self.town.map.rect)
+
+			self.window.blit(self.town.scooter.image,
+							 self.town.scooter.rect)
+
 			pygame.display.update()
 			self.clock.tick(config_HexaPizza.FPS)
 

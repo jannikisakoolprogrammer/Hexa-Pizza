@@ -7,6 +7,10 @@ import math
 from code.classes.FileLoaderGraphic import FileLoaderGraphic
 from code.configs import config_Scooter
 
+from code.classes.Meadow import Meadow
+from code.classes.House import House
+from code.classes.Forest import Forest
+from code.classes.HexaPizzaHQ import HexaPizzaHQ
 
 class Scooter(pygame.sprite.Sprite):
 	def __init__(self,
@@ -35,6 +39,17 @@ class Scooter(pygame.sprite.Sprite):
 			"RIGHT": False,
 			"UP": False
 			}
+
+		self.collision = False
+
+		self.calc_sin()
+		self.calc_cos()
+
+		self.collision_rect = pygame.Rect((0, 0, 10, 10))
+		self.collision_rect.center = self.rect.center
+
+		# Make distance bigger.  Edge of scooter.
+		self.update_collision_rect()
 
 
 	def update(self, _eventlist):
@@ -90,15 +105,18 @@ class Scooter(pygame.sprite.Sprite):
 			self.rect.center = orig_center
 
 		if self.key_states["UP"]:
-			# Move map now.  Should use lookup tables here.
-			x = math.sin(math.radians(self.degrees)) * config_Scooter.CONFIG["SPEED"]
-			y = math.cos(math.radians(self.degrees)) * config_Scooter.CONFIG["SPEED"]
+			if not self.collision:
+				# Move map tiles now.  Should use lookup tables here.
+				x = self.sin * config_Scooter.CONFIG["SPEED"]
+				y = self.cos * config_Scooter.CONFIG["SPEED"]
 
-			self.map_centerx += x
-			self.map_centery += y
+				self._map.move(x,
+							   y)
 
-			self._map.rect.centerx = self.map_centerx
-			self._map.rect.centery = self.map_centery
+		self.update_collision_rect()
+
+		# Always check for collisions with meadows, houses, ...
+		self.check_collision()
 
 
 	def alter_angle(self,
@@ -112,3 +130,33 @@ class Scooter(pygame.sprite.Sprite):
 			self.degrees += _amount
 			if self.degrees < 0:
 				self.degrees = 360 + _amount
+
+		self.calc_sin()
+		self.calc_cos()
+
+
+	def calc_sin(self):
+		self.sin = math.sin(math.radians(self.degrees))
+
+
+	def calc_cos(self):
+		self.cos = math.cos(math.radians(self.degrees))
+
+
+	def update_collision_rect(self):
+		self.collision_rect.centerx = self.rect.centerx - (self.sin * 40)
+		self.collision_rect.centery = self.rect.centery - (self.cos * 40)
+
+
+	def check_collision(self):
+		# Check if there is any collsion between the scooter and various tiles.
+		# If there is, set the collision attribute to True.
+		# Otherwise set it to False.
+
+		if Meadow.check_collision_with_scooter(self.collision_rect) or \
+			Forest.check_collision_with_scooter(self.collision_rect) or \
+			House.check_collision_with_scooter(self.collision_rect) or \
+			HexaPizzaHQ.check_collision_with_scooter(self.collision_rect):
+			self.collision = True
+		else:
+			self.collision = False

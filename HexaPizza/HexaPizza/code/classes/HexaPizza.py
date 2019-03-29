@@ -5,6 +5,7 @@ from code.classes.Town import Town
 from code.configs import config_Town
 
 from code.configs import config_HexaPizza
+from code.classes.Meadow import Meadow
 
 class HexaPizza(object):
 	"""Main game class.

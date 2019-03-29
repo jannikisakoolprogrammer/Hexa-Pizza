@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="code\classes\CollisionClassTile.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\FileLoader.py">
       <SubType>Code</SubType>
     </Compile>
@@ -30,13 +33,25 @@
     <Compile Include="code\classes\FileLoaderTxt.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\Forest.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\HexaPizza.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\HexaPizzaHQ.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\House.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\classes\Map.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\classes\MapTile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Meadow.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\classes\Scooter.py">

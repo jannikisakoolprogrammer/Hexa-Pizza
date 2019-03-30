@@ -51,14 +51,24 @@ class Scooter(pygame.sprite.Sprite):
 		# Make distance bigger.  Edge of scooter.
 		self.update_collision_rect()
 
+		# Current speed.
+		self.current_speed = 0
+		self.max_speed = config_Scooter.CONFIG["SPEED"]
+		self.acceleration_factor = config_Scooter.CONFIG["ACCELERATION_FACTOR"]
+		self.brake_factor = config_Scooter.CONFIG["BRAKE_FACTOR"]
+
 
 	def update(self, _eventlist):
 		"""Updates the scooter.
 
 		"""
-		self.check_update_key_states(_eventlist)
-		if self.check_perform_movement():
+		if not HexaPizzaHQ.Instances[0].hexa_pizza_hq_menu.hidden:
+			return
+		else:
+			self.check_update_key_states(_eventlist)
+			self.check_perform_movement()
 			self.perform_movement()
+
 
 	def check_update_key_states(self, _eventlist):
 		for event in _eventlist:
@@ -107,11 +117,20 @@ class Scooter(pygame.sprite.Sprite):
 		if self.key_states["UP"]:
 			if not self.collision:
 				# Move map tiles now.  Should use lookup tables here.
-				x = self.sin * config_Scooter.CONFIG["SPEED"]
-				y = self.cos * config_Scooter.CONFIG["SPEED"]
+				self.accelerate()
+			else:
+				self.current_speed = 0
+		else:
+			if not self.collision:
+				self.brake()
+			else:
+				self.current_speed = 0
 
-				self._map.move(x,
-							   y)
+		x = self.sin * self.current_speed
+		y = self.cos * self.current_speed
+
+		self._map.move(x,
+						y)
 
 		self.update_collision_rect()
 
@@ -160,3 +179,16 @@ class Scooter(pygame.sprite.Sprite):
 			self.collision = True
 		else:
 			self.collision = False
+
+
+	def accelerate(self):
+		if self.current_speed < (self.max_speed - self.acceleration_factor):
+			self.current_speed += self.acceleration_factor
+		else:
+			self.current_speed = self.max_speed
+
+	def brake(self):
+		if self.current_speed > 0:
+			self.current_speed -= self.brake_factor
+		else:
+			self.current_speed = 0

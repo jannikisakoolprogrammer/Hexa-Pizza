@@ -36,13 +36,25 @@
     <Compile Include="code\classes\Forest.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\GraphicalMenuItem.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\HexaPizza.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\classes\HexaPizzaHQ.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\HexaPizzaHQMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\HexaPizzaLog.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\House.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\KeepWarmBox.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\classes\Map.py">
@@ -54,10 +66,34 @@
     <Compile Include="code\classes\Meadow.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\Menu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Order.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Oven.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\OvenMenuItem.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\Pizza.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\classes\PizzaMenuItem.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\Scooter.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="code\classes\Timer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="code\classes\Town.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_Colours.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\configs\config_FileLoader.py">
@@ -70,6 +106,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\configs\config_HexaPizza.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_HexaPizzaHQ.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_HexaPizzaHQMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="code\configs\config_HexaPizzaLog.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="code\configs\config_MapTile.py">
